@@ -5,7 +5,7 @@
         <ul class="list-group">
             @foreach ($menu as $item)
             <li class="list-group-item">
-                {{$item->item_name}}
+                <input type='checkbox'> {{$item->item_name}}
             </li>
             @endforeach
         </ul>
