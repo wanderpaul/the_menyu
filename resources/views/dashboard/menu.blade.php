@@ -1,15 +1,16 @@
 <x-layout>
     Items
     <hr>
-    <div>
+    
+    <form>
         <ul class="list-group">
             @foreach ($menu as $item)
-            <li class="list-group-item">
-                <input type='checkbox'> {{$item->item_name}}
-            </li>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="food_{{$item->id}}">
+                <label class="form-check-label" for="food_{{$item->id}}">{{$item->item_name}}</label>
+            </div>
             @endforeach
         </ul>
-    </div>
-
-    <button type="button" class="btn btn-primary">Add</button>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
 </x-layout>
